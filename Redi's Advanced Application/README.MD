@@ -2,10 +2,14 @@
 
 > **Module Information:** 
 Package Name: Redi's Advanced Application System
-Creation Date: 12/06/2019
-Last Updated: 13/06/2019
-Require: DBM Mods, Latest Modpack (as of 12/06/2019)
-If there's anything wrong with the package, please contact Redi Panda_#3657.
+
+> Creation Date: 12/06/2019
+
+> Last Updated: 13/06/2019
+
+> Require: DBM Mods, Latest Modpack (as of 12/06/2019)
+
+> If there's anything wrong with the package, please contact Redi Panda_#3657.
 
 > **WARNING: NOT SYNCED AND CONNECTED WITH OTHER REDI'S SUB-MODULES**
 
