@@ -1,0 +1,201 @@
+{
+  "name": "accept",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zGXTc",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "authID",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\"",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\"",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You must be an approved Application Manager to access this command!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "10",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "There is no recently opened application to look at!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".appID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "appid.temp",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🛂 | You are editing application: `${tempVars(\"appid.temp\")}`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"appid.temp\")}\".userID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "userID",
+      "name": "Store Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Processing `${tempVars(\"userID\")}`'s application...",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"userID\")}",
+      "storage": "1",
+      "varName": "memberObject",
+      "find2": "0",
+      "name": "Find Member"
+    },
+    {
+      "channel": "5",
+      "varName": "memberObject",
+      "message": "✅ | Your application has been accepted by an Application Manager!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "2",
+      "varName": "memberObject",
+      "dataName": "redipanda.application.exist",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "memberObject",
+      "dataName": "redipanda.application.exist",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "Mod Data Fix",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".appID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".appID",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Server Data"
+    }
+  ]
+}
