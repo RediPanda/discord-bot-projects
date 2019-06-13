@@ -1,0 +1,468 @@
+{
+  "name": "apply",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "wIppV",
+  "actions": [
+    {
+      "server": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "serverName",
+      "name": "Store Server Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "applicant.Object",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "applicant.ID",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "applicant.Avatar",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "applicant.Username",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "22",
+      "storage": "1",
+      "varName2": "applicant.DTag",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "18",
+      "storage": "1",
+      "varName2": "applicant.Account.Joined",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "21",
+      "storage": "1",
+      "varName2": "applicant.Account.Created",
+      "name": "Store Member Info"
+    },
+    {
+      "title": "Application | ${tempVars(\"serverName\")}",
+      "author": "${tempVars(\"applicant.Username\")}",
+      "color": "#4286f4",
+      "url": "",
+      "authorIcon": "${tempVars(\"applicant.Avatar\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embedded",
+      "name": "Create Embed Message"
+    },
+    {
+      "comment": "Check if already applied",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.application.exist",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.application.exist",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "13",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Member Data"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "message": "❌ | You cannot apply again if your application is still pending! ",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "channel": "1",
+      "varName2": "]",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "message": "Hello there! What is your name?\n\nNote: All responses are recorded. Your ID is: ${tempVars(\"applicant.ID\")}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "channel": "5",
+      "varName2": "applicant.Object",
+      "storage3": "1",
+      "varName3": "msg.Object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "message": "1",
+      "varName": "msg.Object",
+      "info": "4",
+      "storage": "1",
+      "varName2": "msg.Channel",
+      "name": "Store Message Info"
+    },
+    {
+      "storage": "3",
+      "varName": "msg.Channel",
+      "filter": "author.id === '${msg.author.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "2",
+      "iftrueVal": "22",
+      "iffalse": "2",
+      "iffalseVal": "20",
+      "storage2": "1",
+      "varName2": "Answer1",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "This application request has been timed out!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "message": "What is your age?",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "channel": "5",
+      "varName2": "applicant.Object",
+      "storage3": "1",
+      "varName3": "msg.Object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "3",
+      "varName": "msg.Channel",
+      "filter": "author.id === '${msg.author.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "2",
+      "iftrueVal": "27",
+      "iffalse": "2",
+      "iffalseVal": "25",
+      "storage2": "1",
+      "varName2": "Answer2",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "This application request has been timed out!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "message": "Why do you want to apply?",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "channel": "5",
+      "varName2": "applicant.Object",
+      "storage3": "1",
+      "varName3": "msg.Object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "3",
+      "varName": "msg.Channel",
+      "filter": "author.id === '${msg.author.id}'",
+      "max": "1",
+      "time": "60000",
+      "iftrue": "2",
+      "iftrueVal": "32",
+      "iffalse": "2",
+      "iffalseVal": "30",
+      "storage2": "1",
+      "varName2": "Answer3",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "1",
+      "varName": "",
+      "message": "This application request has been timed out!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "message": "✅ | Your application has been submitted!",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embedded",
+      "channel": "5",
+      "varName2": "applicant.Object",
+      "storage3": "1",
+      "varName3": "msg.Object",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "addType": "0",
+      "position": "",
+      "value": "\"${tempVars(\"applicant.ID\")}\"",
+      "name": "Add Item to List"
+    },
+    {
+      "comment": "Store Application Data",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.application.exist",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.application.exist",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\"",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userid",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userTag",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userJS",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userCA",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A1",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A2",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A3",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\"",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userID",
+      "changeType": "0",
+      "value": "tempVars(\"applicant.ID\")",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userTag",
+      "changeType": "0",
+      "value": "\"${tempVars(\"applicant.DTag\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userJS",
+      "changeType": "0",
+      "value": "\"${tempVars(\"applicant.Account.Joined\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".userCA",
+      "changeType": "0",
+      "value": "\"${tempVars(\"applicant.Account.Created\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A1",
+      "changeType": "0",
+      "value": "\"${tempVars(\"Answer1\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A2",
+      "changeType": "0",
+      "value": "\"${tempVars(\"Answer2\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"applicant.ID\")}\".A3",
+      "changeType": "0",
+      "value": "\"${tempVars(\"Answer3\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "name": "Save Variable"
+    }
+  ]
+}
