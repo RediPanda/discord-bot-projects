@@ -1,0 +1,465 @@
+{
+  "name": "marry",
+  "permissions": "NONE",
+  "restriction": "0",
+  "_id": "njnCQ",
+  "actions": [
+    {
+      "message": "0",
+      "varName": "",
+      "info": "2",
+      "ParamN": "1",
+      "separator": "",
+      "storage": "1",
+      "varName2": "luckyUser",
+      "name": "Store Message Params"
+    },
+    {
+      "condition": "1",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "5",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "❎ | Please mention one specific server member!\n\n",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "9",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "⛔ | You cannot marry more than one person!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "LuckyOne",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "ProposedOne",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "16",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "❌ | I'm sorry! You cannot marry to a person that's already married!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Start of Married Assortation",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💍 | Proposement Contract Sent! ",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "channel": "2",
+      "varName": "",
+      "message": "💍 | ${msg.author.username} has proposed to you! Do you accept their request?",
+      "storage": "1",
+      "varName2": "luckyone.msg",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "luckyone.msg",
+      "emoji": "4",
+      "varName2": "✅",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "luckyone.msg",
+      "emoji": "4",
+      "varName2": "❌",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "luckyone.msg",
+      "info": "1",
+      "find": "✅",
+      "storage": "1",
+      "varName2": "tick",
+      "name": "Find Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "luckyone.msg",
+      "info": "1",
+      "find": "❌",
+      "storage": "1",
+      "varName2": "cross",
+      "name": "Find Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "luckyone.msg",
+      "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌'",
+      "max": "2",
+      "time": "60000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "2",
+      "iftrueVal": "25",
+      "iffalse": "2",
+      "iffalseVal": "23",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "channel": "5",
+      "varName": "luckyUser",
+      "message": "⌛ | This request has been timed out.",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "2",
+      "varName": "luckyUser",
+      "reaction": "1",
+      "varName2": "tick",
+      "iftrue": "2",
+      "iftrueVal": "28",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "member": "2",
+      "varName": "luckyUser",
+      "reaction": "1",
+      "varName2": "cross",
+      "iftrue": "2",
+      "iftrueVal": "55",
+      "iffalse": "1",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💍 | ${tempVars(\"luckyUser\")} has accepted your proposal!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memberUsername.given",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberID.given",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "2",
+      "storage": "1",
+      "varName2": "memberUsername.local",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "memberID.local",
+      "name": "Store Member Info"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "String(new Date())",
+      "storage": "1",
+      "varName": "begunOn",
+      "name": "Run Script"
+    },
+    {
+      "comment": "Local Data",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "changeType": "0",
+      "value": "\"${tempVars(\"memberUsername.given\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "changeType": "0",
+      "value": "\"${tempVars(\"memberID.given\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "changeType": "0",
+      "value": "\"${tempVars(\"begunOn\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "Partner Data",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "changeType": "0",
+      "value": "\"${tempVars(\"memberUsername.local\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "changeType": "0",
+      "value": "\"${tempVars(\"memberID.local\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "changeType": "0",
+      "value": "\"${tempVars(\"begunOn\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "time": "5",
+      "measurement": "0",
+      "name": "Wait"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💍 | ${tempVars(\"memberUsername.local\")} and ${tempVars(\"memberUsername.given\")} have both married!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💍 | ${tempVars(\"luckyUser\")} has declined your proposal!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    }
+  ]
+}

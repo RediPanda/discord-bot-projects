@@ -1,0 +1,174 @@
+{
+  "name": "marriage",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "zpDvD",
+  "actions": [
+    {
+      "storage": "0",
+      "varName": "",
+      "name": "Delete Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "authUser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "authUserDisplay",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "authUserURL",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "3",
+      "storage": "1",
+      "varName2": "selectedUserDisplay",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "0",
+      "storage": "1",
+      "varName2": "selectedUser",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "info": "16",
+      "storage": "1",
+      "varName2": "selectedUserURL",
+      "name": "Store Member Info"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "3",
+      "ParamN": "1",
+      "separator": "",
+      "storage": "1",
+      "varName2": "mentionedUser",
+      "name": "Store Message Params"
+    },
+    {
+      "comment": "Start Script",
+      "color": "#80ff00",
+      "name": "Comment"
+    },
+    {
+      "condition": "1",
+      "comparison": "2",
+      "value": "0",
+      "iftrue": "2",
+      "iftrueVal": "13",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please mention a user to start a search!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "\"N/A\"",
+      "storage": "1",
+      "varName2": "PartnerNode",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "defaultVal": "\"N/A\"",
+      "storage": "1",
+      "varName2": "PartnerName",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "defaultVal": "\"N/A\"",
+      "storage": "1",
+      "varName2": "PartnerID",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "0",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "defaultVal": "\"N/A\"",
+      "storage": "1",
+      "varName2": "PartnerDate",
+      "name": "Store Member Data"
+    },
+    {
+      "title": "Marriage",
+      "author": "${tempVars(\"authUserDisplay\")}",
+      "color": "${globalVars(\"gvar.pink\")}",
+      "url": "",
+      "authorIcon": "${tempVars(\"authUserURL\")}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "${tempVars(\"selectedUserURL\")}",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "marriage.Auth",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "marriage.Auth",
+      "message": "**Information: ${tempVars(\"selectedUserDisplay\")}**\n\n**Partner:** ${tempVars(\"PartnerName\")}\n**Partner ID:** ${tempVars(\"PartnerID\")}\n\n**Married on:** *${tempVars(\"PartnerDate\")}*",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "marriage.Auth",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    }
+  ]
+}
