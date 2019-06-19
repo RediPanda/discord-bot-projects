@@ -1,0 +1,334 @@
+{
+  "name": "divorce",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "CKHYu",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "❌ | You are currently not married to anyone!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "Store's Command Auth Data",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "partnerName1",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "partnerID",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "comment": "Store's Command Auth's Partner Data",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "info": "0",
+      "find": "${tempVars(\"partnerID\")}",
+      "storage": "1",
+      "varName": "partner.Object",
+      "find2": "1",
+      "name": "Find Member"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.partnerName",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "partnerName2",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.partnerID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.begun",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "comment": "Confirmation of Divorce",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💔 | Are you sure you want to end your relationship with: `${tempVars(\"partnerName1\")}`?",
+      "storage": "1",
+      "varName2": "message.Await",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "storage": "1",
+      "varName": "message.Await",
+      "emoji": "4",
+      "varName2": "✅",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "message.Await",
+      "emoji": "4",
+      "varName2": "❌",
+      "varName3": "",
+      "name": "Add Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "message.Await",
+      "info": "1",
+      "find": "✅",
+      "storage": "1",
+      "varName2": "tick",
+      "name": "Find Reaction"
+    },
+    {
+      "message": "1",
+      "varName": "message.Await",
+      "info": "1",
+      "find": "❌",
+      "storage": "1",
+      "varName2": "cross",
+      "name": "Find Reaction"
+    },
+    {
+      "storage": "1",
+      "varName": "message.Await",
+      "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌'",
+      "max": "2",
+      "time": "60000",
+      "maxEmojis": "",
+      "maxUsers": "",
+      "iftrue": "2",
+      "iftrueVal": "23",
+      "iffalse": "2",
+      "iffalseVal": "21",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Await Reaction Call Action"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "⌛ | This operation has been timed out!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "tick",
+      "iftrue": "2",
+      "iftrueVal": "29",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "reaction": "1",
+      "varName2": "cross",
+      "iftrue": "2",
+      "iftrueVal": "27",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check If User Reacted"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "An error has occured!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🔥 | Burning the Divorce Papers...",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "📑 | Printing the divorce papers...",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "comment": "Command Auth",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.currentAmount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerName",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.partnerID",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "axeltov.marry.begun",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "comment": "Command Auth's Partner",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.currentAmount",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.partnerName",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.partnerID",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "2",
+      "varName": "partner.Object",
+      "dataName": "axeltov.marry.begun",
+      "changeType": "0",
+      "value": "\"N/A\"",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "💔 | `${tempVars(\"partnerName2\")}` and `${tempVars(\"partnerID\")}` divorced!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ]
+}
