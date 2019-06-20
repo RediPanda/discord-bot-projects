@@ -31,28 +31,13 @@ Package Name: Redi's Marriage System
 
 ## What do these commands/events do?
 
-`Command - [p]marry`
+`Command - [p]marry <@user>`
 Initiates a DM to the Command Author with a proposal message. The bot will await for the user to react to this response whether they want to marry this user. 
-**If by any chance does a Application Manager accidently scrolled through the listing, removing the application's information; they can do [p]review <userid> to fetch the information and only then can they accept/deny that request.
+**
 
-`Command - [p]marriage`
-Displays the listing of all awaiting applications. It displays the total applications awaiting for review and displays all the ID's in a good-looking embeded message.
--- --- -- ---`Subcommand - [p]review <id>`
-Displays the specific application ID's information. This includes their account information; Display Tag, User ID, Account Creation Date, Account Join Guild Date and includes the responses provided. This command is also used to fetch previous staff information since this does not clear their internal data.
+`Command - [p]marriage <@user>`
+Displays the mentioned user's marital status. This includes; Partner's name, Partner's ID and the Date/Time they've married.
 
-`Command - Scroll`
-Scrolls up the review listing, removing the highest (oldest) ID to allow easier breathing space and management.
+`Command - [p]divorce`
+Initiates the divorce prompt. This will clear both parties info.
 
-`Command - Accept`
-Accepts the application and sends the applicant a DM in response to their application status.
-
-`Command - Deny`
-Denies the application and sends the applicant a DM in response to their application status.
-
-`Command - AddStaff`
-Grants the mentioned user the ability to use **review, accept, deny scroll**.
-
-`Command - DelStaff`
-Ungrants the mentioned user the ability to use **review, accept, deny scroll**.
-
-#
