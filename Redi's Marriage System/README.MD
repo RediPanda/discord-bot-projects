@@ -32,7 +32,7 @@ Package Name: Redi's Marriage System
 ## What do these commands/events do?
 
 `Command - [p]marry`
-Initiates a DM to the Command Author with 3 (default) responses. The bot will await for the user to complete these responses in order to submit it to the corresponding guild. Timeout during the responses will cancel the operation. Applicants by default cannot re-apply to prevent filter flooding, unless the Application Manager approves or denies the application.
+Initiates a DM to the Command Author with a proposal message. The bot will await for the user to react to this response whether they want to marry this user. 
 **If by any chance does a Application Manager accidently scrolled through the listing, removing the application's information; they can do [p]review <userid> to fetch the information and only then can they accept/deny that request.
 
 `Command - [p]marriage`
