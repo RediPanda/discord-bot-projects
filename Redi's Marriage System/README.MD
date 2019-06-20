@@ -17,7 +17,7 @@ Package Name: Redi's Marriage System
 
 **The following package includes:**
 
-  - *Marry other users!*
+  - *Marry other users (Max 1!)!*
   - *Divorce other users!*
   - *Check marital status on other users!*
  
