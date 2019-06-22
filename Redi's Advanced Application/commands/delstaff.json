@@ -17,7 +17,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "Incorrect Usage: [p]addstaff @user",
+      "message": "Incorrect Usage: [p]delstaff @user",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
