@@ -4,4 +4,4 @@ Hello! Welcome to my DBM Repository,
 
 I assume you're here for that raw data yas?
 
-[(https://img.shields.io/badge/Version-1.2-critical.svg)](https://bitbucket.org/lbesson/ansi-colors)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
