@@ -20,3 +20,9 @@ _**Any problems that persists, please don't hesitate to contact my Discord. I'm 
 on vacation. So please bear in mind that I also have a life as well :)**_
 
 [![Last Updated](https://img.shields.io/badge/Last%20Master%20Updated-24%2F6-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
+
+| Package Name | Version | Last Updated | Package Link |
+|--|--|--|--|
+| Ticket System | ![Last Updated](https://img.shields.io/badge/Latest%20Version-v1.0.0-green.svg?style=for-the-badge) | ![Last Updated](https://img.shields.io/badge/Last%20Package%20Updated-24%2F6-critical.svg?style=for-the-badge) | [Click here!]([https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Marriage%20System](https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Marriage%20System)) |
+| Marriage System | ![Last Updated](https://img.shields.io/badge/Latest%20Version-v1.0.2-green.svg?style=for-the-badge) | ![Last Updated](https://img.shields.io/badge/Last%20Package%20Updated-21%2F6-critical.svg?style=for-the-badge) | [Click here!]([https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Marriage%20System](https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Marriage%20System)) |
+| Application System | ![Last Updated](https://img.shields.io/badge/Latest%20Version-v1.0.5-green.svg?style=for-the-badge) | ![Last Updated](https://img.shields.io/badge/Last%20Package%20Updated-21%2F6-critical.svg?style=for-the-badge) | [Click here!]([https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Advanced%20Application](https://github.com/RediPanda/discord-bot-projects/tree/master/Redi's%20Advanced%20Application)) |
