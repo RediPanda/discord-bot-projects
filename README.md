@@ -4,4 +4,4 @@ Hello! Welcome to my DBM Repository,
 
 I assume you're here for that raw data yas?
 
-Parsing Build: [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity)
+[![Bintray](https://img.shields.io/bintray/v/blocke/releases/scalajack.svg?maxAge=3600)](https://bintray.com/blocke/releases/scalajack)
