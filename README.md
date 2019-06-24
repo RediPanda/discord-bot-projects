@@ -8,7 +8,7 @@ This repository contains and stores all Raw Data packages created by Redi Panda_
 
 All RD Packages are available and free for users to edit, **HOWEVER;**
 
-*If you plan to redistribute and/or publish these RD, you must acquire permission from me. I hate it when people "create" content
-then
+*If you plan to redistribute and/or publish these RD, you must acquire permission from me and credit/link back to this repository. I hate it when people "create" content
+then claim it as "their" work.*
 
 [![Last Updated](https://img.shields.io/badge/Last%20Updated-24%2F6-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
