@@ -184,7 +184,7 @@
       "storage": "1",
       "varName": "luckyone.msg",
       "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌'",
-      "max": "2",
+      "max": "1",
       "time": "60000",
       "maxEmojis": "",
       "maxUsers": "",

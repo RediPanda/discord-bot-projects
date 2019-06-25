@@ -28,7 +28,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "❌ | You are currently not married to anyone!",
+      "message": "? | You are currently not married to anyone!",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -118,7 +118,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "💔 | Are you sure you want to end your relationship with: `${tempVars(\"partnerName1\")}`?",
+      "message": "?? | Are you sure you want to end your relationship with: `${tempVars(\"partnerName1\")}`?",
       "storage": "1",
       "varName2": "message.Await",
       "iffalse": "0",
@@ -129,7 +129,7 @@
       "storage": "1",
       "varName": "message.Await",
       "emoji": "4",
-      "varName2": "✅",
+      "varName2": "?",
       "varName3": "",
       "name": "Add Reaction"
     },
@@ -137,7 +137,7 @@
       "storage": "1",
       "varName": "message.Await",
       "emoji": "4",
-      "varName2": "❌",
+      "varName2": "?",
       "varName3": "",
       "name": "Add Reaction"
     },
@@ -145,7 +145,7 @@
       "message": "1",
       "varName": "message.Await",
       "info": "1",
-      "find": "✅",
+      "find": "?",
       "storage": "1",
       "varName2": "tick",
       "name": "Find Reaction"
@@ -154,7 +154,7 @@
       "message": "1",
       "varName": "message.Await",
       "info": "1",
-      "find": "❌",
+      "find": "?",
       "storage": "1",
       "varName2": "cross",
       "name": "Find Reaction"
@@ -162,8 +162,8 @@
     {
       "storage": "1",
       "varName": "message.Await",
-      "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌'",
-      "max": "2",
+      "filter": "reaction.emoji.name === '?' || reaction.emoji.name === '?'",
+      "max": "1",
       "time": "60000",
       "maxEmojis": "",
       "maxUsers": "",
@@ -178,7 +178,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "⌛ | This operation has been timed out!",
+      "message": "? | This operation has been timed out!",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -226,7 +226,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "🔥 | Burning the Divorce Papers...",
+      "message": "?? | Burning the Divorce Papers...",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -239,7 +239,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "📑 | Printing the divorce papers...",
+      "message": "?? | Printing the divorce papers...",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
@@ -323,7 +323,7 @@
     {
       "channel": "0",
       "varName": "",
-      "message": "💔 | `${tempVars(\"partnerName2\")}` and `${tempVars(\"partnerID\")}` divorced!",
+      "message": "?? | `${tempVars(\"partnerName2\")}` and `${tempVars(\"partnerID\")}` divorced!",
       "storage": "0",
       "varName2": "",
       "iffalse": "0",
