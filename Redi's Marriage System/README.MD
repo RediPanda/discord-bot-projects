@@ -5,9 +5,9 @@ Package Name: Redi's Marriage System
 
 > Creation Date: 23/05/2019
 
-> Last Updated: 19/06/2019
+> Last Updated: 26/06/2019
 
-> Require: DBM Mods, Latest Modpack (as of 19/06/2019)
+> Require: DBM Mods, Latest Modpack (as of 26/06/2019)
 
 > If there's anything wrong with the package, please contact Redi Panda_#3657.
 
