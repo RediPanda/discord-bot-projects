@@ -183,9 +183,9 @@
     {
       "storage": "1",
       "varName": "luckyone.msg",
-      "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌'",
+      "filter": "reaction.emoji.name === '✅' || reaction.emoji.name === '❌' && user.id === '${tempVars(\"LuckyOne\")}'",
       "max": "1",
-      "time": "60000",
+      "time": "30000",
       "maxEmojis": "",
       "maxUsers": "",
       "iftrue": "2",

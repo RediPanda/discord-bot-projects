@@ -134,7 +134,7 @@
     {
       "title": "Marriage",
       "author": "${tempVars(\"authUserDisplay\")}",
-      "color": "${globalVars(\"gvar.pink\")}",
+      "color": "#f442d1",
       "url": "",
       "authorIcon": "${tempVars(\"authUserURL\")}",
       "authorUrl": "",
