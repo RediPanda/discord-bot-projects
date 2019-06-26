@@ -14,7 +14,9 @@ then claim it as "their" work.*
 *You are also allowed to do slight modifications/revamps to these RD Packages if these do get outdated (Requiring permission), however please contact
 me before editing these packages in case I already got update plans for them.*
 
-> Failure to comply to those following policies set from this README document will result getting reported straight to the DBM Network. We do not condone users to plagerise work with Raw Data. Again, you are **free** to edit the contents to your liking, but _**Distributing**_ the packages, *EDITED OR NOT EDITED* without permission is not permitted.
+> Failure to comply to those following policies set from this README document will result getting reported straight to the DBM Network. We do not condone users to plagerise work with Raw Data. Again, you are **free** to edit the contents to your liking, but _**distributing**_ the packages, *EDITED OR NOT EDITED* without permission is not permitted.
+
+> Also, by using my packages, you agree to all the terms stated in this document. These terms can change at any time, however any **significant** changes will be attempted to be clear and noticeable as possible.
 
 **Thank you for your understanding and don't forget to vote these RD Packages so that I can continue to make more packages for the community.**
 
