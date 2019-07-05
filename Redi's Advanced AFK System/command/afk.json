@@ -1,0 +1,195 @@
+{
+  "name": "afk",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "tbqao",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk.notice",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Data"
+    },
+    {
+      "title": "AFK System",
+      "author": "${msg.author.username}",
+      "color": "",
+      "url": "",
+      "authorIcon": "${msg.author.displayAvatarURL}",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed.notice",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.notice",
+      "message": "Please provide a response on why you're AFK or a message to those that are looking for you.",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed.notice",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "storage": "0",
+      "varName": "",
+      "filter": "author.id === '${msg.author.id}'",
+      "max": "1",
+      "time": "120000",
+      "iftrue": "3",
+      "iftrueVal": "3",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "storage2": "1",
+      "varName2": "notice.contents",
+      "name": "Await Response Call Action"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Defaulting notice to: `This user is AFK! No response has been set.`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk.notice",
+      "changeType": "0",
+      "value": "\"This user is AFK! No response has been set.\"",
+      "name": "Control Member Data"
+    },
+    {
+      "changeType": "0",
+      "value": "1",
+      "storage": "1",
+      "varName": "redipanda.var.declare.afknotice",
+      "name": "Control Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "redipanda.var.declare.afknotice",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk.notice",
+      "changeType": "0",
+      "value": "\"${tempVars(\"notice.contents\")}\"",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Member Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "✅ | Successfully set your AFK Status!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "nickname": "[AFK] ${member.displayName}",
+      "name": "Set Member Nickname"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "dataName": "redipanda.user.afk.notice",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Member Data"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "nickname": "${msg.author.username}",
+      "name": "Set Member Nickname"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Welcome back ${member}!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    }
+  ],
+  "comType": "0"
+}
