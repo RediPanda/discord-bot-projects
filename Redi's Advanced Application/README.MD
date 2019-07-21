@@ -11,6 +11,8 @@ Package Name: Redi's Advanced Application System
 
 > If there's anything wrong with the package, please contact Redi Panda_#3657.
 
+**Big thanks to TheMonDon#1721 for fixing up some files and adding conditions check to some commands!**
+
 > **WARNING: NOT SYNCED AND CONNECTED WITH OTHER REDI'S SUB-MODULES**
 
 *Redi's Advanced Application System provides you the ultimate control over the applications in your guild. From both the application manager's sides to the end-user, it is friendly to use and easy to edit.*
