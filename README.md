@@ -23,8 +23,8 @@ me before editing these packages in case I already got update plans for them.*
 _**Any problems that persists, please don't hesitate to contact my Discord. I'm online on a daily basis, however if I don't contact back, I'm probably
 on vacation. So please bear in mind that I also have a life as well :)**_
 
-[![Last Updated](https://img.shields.io/badge/Last%20Master%20Updated-5%2F07-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
-[![Last Updated](https://img.shields.io/badge/Master%20Status-ON%20HALT-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
+[![Last Updated](https://img.shields.io/badge/Last%20Master%20Updated-23%2F7-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
+[![Last Updated](https://img.shields.io/badge/Master%20Status-DEVELOPING-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
 
 | Package Name | Version | Last Updated | Package Link | Status |
 |--|--|--|--|--|
