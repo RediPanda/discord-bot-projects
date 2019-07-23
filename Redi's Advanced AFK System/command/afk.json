@@ -23,13 +23,141 @@
       "name": "Store Member Data"
     },
     {
+      "server": "0",
+      "varName": "",
+      "storage": "1",
+      "varName2": "bot.member",
+      "name": "Get Bot as Member"
+    },
+    {
+      "member": "2",
+      "varName": "bot.member",
+      "permission": "MANAGE_NICKNAMES",
+      "iftrue": "3",
+      "iftrueVal": "2",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Member Permissions"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🔴 **Missing Permissions** *This bot is lacking permission node:* `MANAGE_NICKNAMES`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "7",
+      "storage": "1",
+      "varName2": "commandAuth.highrole",
+      "name": "Store Member Info"
+    },
+    {
+      "member": "2",
+      "varName": "bot.member",
+      "info": "7",
+      "storage": "1",
+      "varName2": "bot.highrole",
+      "name": "Store Member Info"
+    },
+    {
+      "role": "3",
+      "varName": "bot.highrole",
+      "info": "4",
+      "storage": "1",
+      "varName2": "bot.role.int",
+      "name": "Store Role Info"
+    },
+    {
+      "role": "3",
+      "varName": "commandAuth.highrole",
+      "info": "4",
+      "storage": "1",
+      "varName2": "commandAuth.role.int",
+      "name": "Store Role Info"
+    },
+    {
+      "behavior": "0",
+      "interpretation": "0",
+      "code": "tempVars('bot.role.int') <= tempVars('commandAuth.role.int')",
+      "storage": "1",
+      "varName": "rs.output.rolecheck",
+      "name": "Run Script"
+    },
+    {
+      "storage": "1",
+      "varName": "rs.output.rolecheck",
+      "comparison": "1",
+      "value": "\"true\"",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🔴 **Role Error** *I cannot change nicknames higher or equal roles than me.*",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "info": "10",
+      "storage": "1",
+      "varName2": "is.com.owner",
+      "name": "Store Member Info"
+    },
+    {
+      "storage": "1",
+      "varName": "is.com.owner",
+      "comparison": "1",
+      "value": "true",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "3",
+      "iffalseVal": "2",
+      "name": "Check Variable"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "🔶 **I'm sorry** *but I do not have the ability to change the Guild Owner's nickname!*\n*However, I can set a notice on yourself for others to ping you if you're not available.*",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "time": "1",
+      "measurement": "1",
+      "name": "Wait"
+    },
+    {
       "member": "1",
       "varName": "",
       "dataName": "redipanda.user.afk",
       "comparison": "1",
       "value": "1",
       "iftrue": "2",
-      "iftrueVal": "17",
+      "iftrueVal": "33",
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Check Member Data"
@@ -175,12 +303,6 @@
       "name": "Control Member Data"
     },
     {
-      "member": "1",
-      "varName": "",
-      "nickname": "${msg.author.username}",
-      "name": "Set Member Nickname"
-    },
-    {
       "channel": "0",
       "varName": "",
       "message": "Welcome back ${member}!",
@@ -189,6 +311,12 @@
       "iffalse": "0",
       "iffalseVal": "",
       "name": "Send Message"
+    },
+    {
+      "member": "1",
+      "varName": "",
+      "nickname": "${msg.author.username}",
+      "name": "Set Member Nickname"
     }
   ],
   "comType": "0"
