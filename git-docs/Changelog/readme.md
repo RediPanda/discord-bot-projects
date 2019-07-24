@@ -15,5 +15,29 @@ This page are full of work-logs which are updated whenever theres a Git Push. Th
 
 Initiated logging procedures and protocols on all Packages.
 
-`CREATED` `file` readme.md in  -> `git-docs`  
-`CREATED` `directory` Changelog in -> `git-docs`
+`CREATED` `directory` Changelog in -> `git-docs`  
+`CREATED` `file` readme.md in  -> `Changelog`  
+
+
+> Redi's Advanced Application System
+
+Example package description
+
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`  
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`
+
+
+> Redi's Advanced AFK System
+
+Example package description
+
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`  
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`
+
+
+> Redi's Marriage System
+
+Example package description
+
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`  
+`ACTION` `FILE/DIRECTORY` <filename> in `DIRECTORY`
