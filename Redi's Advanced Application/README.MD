@@ -40,8 +40,9 @@ Initiates a DM to the Command Author with 3 (default) responses. The bot will aw
 **If by any chance does a Application Manager accidently scrolled through the listing, removing the application's information; they can do [p]review <userid> to fetch the information and only then can they accept/deny that request.
 
 `Command - [p]review`
-Displays the listing of all awaiting applications. It displays the total applications awaiting for review and displays all the ID's in a good-looking embeded message.
--- --- -- ---`Subcommand - [p]review <id>`
+Displays the listing of all awaiting applications. It displays the total applications awaiting for review and displays all the ID's in a good-looking embeded message.  
+
+--`Subcommand - [p]review <id>`
 Displays the specific application ID's information. This includes their account information; Display Tag, User ID, Account Creation Date, Account Join Guild Date and includes the responses provided. This command is also used to fetch previous staff information since this does not clear their internal data.
 
 `Command - Scroll`
