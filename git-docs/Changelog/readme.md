@@ -15,5 +15,5 @@ This page are full of work-logs which are updated whenever theres a Git Push. Th
 
 Initiated logging procedures and protocols on all Packages.
 
-`CREATED` `file` readme.md in  -> `git-docs`
+`CREATED` `file` readme.md in  -> `git-docs`  
 `CREATED` `directory` Changelog in -> `git-docs`
