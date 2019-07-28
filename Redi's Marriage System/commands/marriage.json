@@ -28,7 +28,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "16",
+      "info": "12",
       "storage": "1",
       "varName2": "authUserURL",
       "name": "Store Member Info"
@@ -52,7 +52,7 @@
     {
       "member": "0",
       "varName": "",
-      "info": "16",
+      "info": "12",
       "storage": "1",
       "varName2": "selectedUserURL",
       "name": "Store Member Info"
