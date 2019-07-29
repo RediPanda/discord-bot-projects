@@ -120,20 +120,12 @@
       "member": "1",
       "varName": "",
       "info": "10",
-      "storage": "1",
-      "varName2": "is.com.owner",
-      "name": "Store Member Info"
-    },
-    {
-      "storage": "1",
-      "varName": "is.com.owner",
-      "comparison": "1",
-      "value": "true",
+      "varName2": "",
       "iftrue": "0",
       "iftrueVal": "",
       "iffalse": "3",
       "iffalseVal": "2",
-      "name": "Check Variable"
+      "name": "Check If Member"
     },
     {
       "channel": "0",
