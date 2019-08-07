@@ -25,7 +25,7 @@ on vacation. So please bear in mind that I also have a life as well :)**_
 
 **You can find all update changes [here](https://github.com/RediPanda/discord-bot-projects/tree/master/git-docs/Changelog)**
 
-[![Last Updated](https://img.shields.io/badge/Last%20Master%20Updated-23%2F7-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
+[![Last Updated](https://img.shields.io/badge/Last%20Master%20Updated-07%2F08-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
 [![Last Updated](https://img.shields.io/badge/Master%20Status-DEVELOPING-blueviolet.svg?style=for-the-badge)](https://github.com/RediPanda/discord-bot-projects/commits/master)
 
 | Package Name | Version | Last Updated | Package Link | Status |
