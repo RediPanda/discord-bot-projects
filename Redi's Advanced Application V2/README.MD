@@ -97,4 +97,9 @@ to backup all your "data" directory folders on a daily basis since this is good 
 Just remove all your commands from the bot and add these new ones here! All your old data should stay the same, however most features from origin won't carry over. 
 This may include locking systems since the new locking system runs off a different data branch.
 
-``
+`How can I add/remove more questions?`
+
+You can modify the current template by following the instructions provided below this info content and inside the RAW DATA.
+
+1. Make sure that you fully understand that if you fail to comply with the instruction, it may lead to irreversable damage to both the data and 
+the RD itself.
