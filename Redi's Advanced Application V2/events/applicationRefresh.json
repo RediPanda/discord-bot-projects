@@ -1,0 +1,60 @@
+{
+  "name": "ApplicationRefresh",
+  "temp": "",
+  "event-type": "1",
+  "_id": "RlLeA",
+  "actions": [
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "comparison": "0",
+      "value": "",
+      "iftrue": "3",
+      "iftrueVal": "1",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "name": "Create List"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "name": "Save Variable"
+    },
+    {
+      "comment": "",
+      "color": "#000000",
+      "name": "Comment"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "addType": "0",
+      "position": "",
+      "value": "1101",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "removeType": "0",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "name": "Save Variable"
+    },
+    {
+      "tosend": "${globalVars(\"global.list\")}",
+      "name": "Send Message to Console"
+    }
+  ]
+}

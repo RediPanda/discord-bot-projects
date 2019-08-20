@@ -1,0 +1,358 @@
+{
+  "name": "review",
+  "permissions": "NONE",
+  "restriction": "1",
+  "_id": "KBeNf",
+  "actions": [
+    {
+      "member": "1",
+      "varName": "",
+      "info": "1",
+      "storage": "1",
+      "varName2": "authID",
+      "name": "Store Member Info"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\"",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\"",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "6",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "You must be an approved Application Manager to access this command!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "message": "0",
+      "varName": "",
+      "info": "0",
+      "ParamN": "1",
+      "separator": "",
+      "storage": "1",
+      "varName2": "msg.Param",
+      "name": "Store Message Params"
+    },
+    {
+      "condition": "0",
+      "comparison": "2",
+      "value": "1",
+      "iftrue": "0",
+      "iftrueVal": "",
+      "iffalse": "2",
+      "iffalseVal": "10",
+      "name": "Check Parameters"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Please only provide the User ID! `/review OR /review <ID>`",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "condition": "0",
+      "comparison": "0",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "22",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Parameters"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "addType": "0",
+      "position": "",
+      "value": "tempVars(\"authID\")",
+      "name": "Add Item to List"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "removeType": "0",
+      "position": "",
+      "storage2": "0",
+      "varName2": "",
+      "name": "Remove Item from List"
+    },
+    {
+      "storage": "3",
+      "varName": "global.list",
+      "name": "Save Variable"
+    },
+    {
+      "list": "9",
+      "varName": "global.list",
+      "storage": "1",
+      "varName2": "amountOfApplications",
+      "name": "Get List Length"
+    },
+    {
+      "storage": "1",
+      "varName": "amountOfApplications",
+      "comparison": "4",
+      "value": "0",
+      "iftrue": "2",
+      "iftrueVal": "17",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "changeType": "0",
+      "value": "0",
+      "storage": "1",
+      "varName": "amountOfApplications",
+      "name": "Control Variable"
+    },
+    {
+      "title": "Review",
+      "author": "",
+      "color": "#f46542",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "false",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "embed",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "message": "**List of pending applications:**\n\n*There is a total of* `${tempVars(\"amountOfApplications\")}` *applications awaiting for review!*\n\n${globalVars(\"global.list\").join('\\n')}",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "embed",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "comment": "-- START REVIEW --",
+      "color": "#00ff00",
+      "name": "Comment"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "Looking up application ID: ${tempVars(\"msg.Param\")}",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\"",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\"",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "2",
+      "iftrueVal": "27",
+      "iffalse": "2",
+      "iffalseVal": "25",
+      "name": "Check Server Data"
+    },
+    {
+      "channel": "0",
+      "varName": "",
+      "message": "❌ | This application does not exist!",
+      "storage": "0",
+      "varName2": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Message"
+    },
+    {
+      "name": "End Action Sequence"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".userTag",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "DTag",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".userJS",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "JoinS",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".userCA",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "AccountC",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".A1",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "A1",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".A2",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "A2",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.\"${tempVars(\"msg.Param\")}\".A3",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "A3",
+      "name": "Store Server Data"
+    },
+    {
+      "title": "Reviewing Application",
+      "author": "",
+      "color": "#f46542",
+      "url": "",
+      "authorIcon": "",
+      "authorUrl": "",
+      "imageUrl": "",
+      "thumbUrl": "",
+      "timestamp": "true",
+      "debug": "false",
+      "text": "",
+      "year": "",
+      "month": "",
+      "day": "",
+      "hour": "",
+      "minute": "",
+      "second": "",
+      "storage": "1",
+      "varName": "reviewid",
+      "name": "Create Embed Message"
+    },
+    {
+      "storage": "1",
+      "varName": "reviewid",
+      "message": "**Reviewing** *${tempVars(\"msg.Param\")}'s* **application**\n\n**Discord Tag:** *${tempVars(\"DTag\")}*\n\n**Joined the server on:** *${tempVars(\"JoinS\")}*\n\n**Discord Account Created on:** *${tempVars(\"AccountC\")}*\n\n**---===---**\n\n**Response 1:**\n\n*${tempVars(\"A1\")}*\n\n**Response 2:**\n\n*${tempVars(\"A2\")}*\n\n**Response 3:**\n\n*${tempVars(\"A3\")}*\n\n**---===---**",
+      "name": "Set Embed Description"
+    },
+    {
+      "storage": "1",
+      "varName": "reviewid",
+      "channel": "0",
+      "varName2": "",
+      "storage3": "0",
+      "varName3": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Send Embed Message"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".appID",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "defaultVal": "0",
+      "storage": "1",
+      "varName2": "",
+      "name": "Store Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".appID",
+      "changeType": "0",
+      "value": "\"${tempVars(\"msg.Param\")}\"",
+      "name": "Control Server Data"
+    },
+    {
+      "server": "0",
+      "varName": "",
+      "dataName": "redipanda.application.mod.\"${tempVars(\"authID\")}\".app",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Server Data"
+    }
+  ]
+}
