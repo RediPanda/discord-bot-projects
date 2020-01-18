@@ -31,7 +31,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "16",
+      "info": "12",
       "storage": "1",
       "varName2": "applicant.Avatar",
       "name": "Store Member Info"
@@ -47,7 +47,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "22",
+      "info": "16",
       "storage": "1",
       "varName2": "applicant.DTag",
       "name": "Store Member Info"
@@ -55,7 +55,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "18",
+      "info": "14",
       "storage": "1",
       "varName2": "applicant.Account.Joined",
       "name": "Store Member Info"
@@ -63,7 +63,7 @@
     {
       "member": "1",
       "varName": "",
-      "info": "21",
+      "info": "17",
       "storage": "1",
       "varName2": "applicant.Account.Created",
       "name": "Store Member Info"
