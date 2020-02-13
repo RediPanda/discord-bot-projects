@@ -5,7 +5,7 @@
   "_id": "Qhkjt",
   "actions": [
     {
-      "behavior": "1",
+      "behavior": "0",
       "interpretation": "1",
       "code": "// RediCode V1.0.1\n\n// Event Boot\nclient.on('messageReactionRemove', (messageReaction, user) => {\n  let GuildMember = messageReaction.message.guild.members.get(user.id);\n\n  Actions.storeValue(user.id, 1, 'rediEvent.MemberID', cache);\n  Actions.storeValue(GuildMember, 1, 'rediEvent.Member', cache);\n\n  Actions.storeValue(messageReaction, 1, 'rediEvent.ReactionObj', cache);\n});\n",
       "storage": "0",
