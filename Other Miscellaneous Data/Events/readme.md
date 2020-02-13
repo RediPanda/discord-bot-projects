@@ -28,3 +28,5 @@ The following variables will be outputted:
 	• `rediEvent.MemberID` 		- Returns the UserID of the person who unreacted.  
 	• `rediEvent.Member` 		- Returns the Member Object. This variable can be used in the `Store Member Info` source variable.  
 	• `rediEvent.ReactionObj`	- Returns the Reaction Object. This variable can be used in the `Store Reaction Info` source variable.
+
+Note: `rediEvent.Member` returns a GuildMember class. This means that you can do anything server related to this variable such as banning, nicking, add roles/del roles etc.
