@@ -1,0 +1,39 @@
+{
+  "name": "<center><b><div style=\"color:orange;\">RemoteEventBoot</div></center>",
+  "temp": "",
+  "event-type": "1",
+  "_id": "Qhkjt",
+  "actions": [
+    {
+      "behavior": "3",
+      "name": "Run Action Sequence Once"
+    },
+    {
+      "behavior": "1",
+      "interpretation": "1",
+      "code": "// RediCode V1.0.1\n\nconsole.log(\"[REDI ASSETS] : Opened Event Listener - MessageReactionRemove!\")\n\n// Event Boot\nclient.on('messageReactionRemove', (messageReaction, user) => {\n  let GuildMember = messageReaction.message.guild.members.get(user.id);\n\n  Actions.storeValue(user.id, 1, 'rediEvent.MemberID', cache);\n  Actions.storeValue(GuildMember, 1, 'rediEvent.Member', cache);\n\n  Actions.storeValue(messageReaction, 1, 'rediEvent.ReactionObj', cache);\n\n  Actions.callNextAction(cache);\n});\n",
+      "storage": "0",
+      "varName": "",
+      "name": "Run Script"
+    },
+    {
+      "source": "zEVcf",
+      "type": "false",
+      "name": "Call Command/Event"
+    },
+    {
+      "comment": "↑  This action is a command redirector. This will redirect to the executed actions list.",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "This section of the event shouldn't be modified.",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "call": "1",
+      "name": "Jump to Action"
+    }
+  ]
+}

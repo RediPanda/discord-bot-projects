@@ -1,0 +1,90 @@
+{
+  "name": "<center><b><div style=\"color:orange;\">MessageReactionRemoved</div></center>",
+  "temp": "",
+  "event-type": "0",
+  "_id": "zEVcf",
+  "actions": [
+    {
+      "storage": "1",
+      "varName": "redicache.commandEmitter",
+      "comparison": "1",
+      "value": "1",
+      "iftrue": "1",
+      "iftrueVal": "",
+      "iffalse": "0",
+      "iffalseVal": "",
+      "name": "Check Variable"
+    },
+    {
+      "storage": "1",
+      "varName": "redicache.commandEmitter",
+      "changeType": "0",
+      "value": "1",
+      "name": "Control Variable"
+    },
+    {
+      "comment": "Don't touch the code above me. This stuff is pretty much flood protection for some random dupes.",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "This is the expected code you want to run!",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "↓ ↓ ↓ ↓ ↓ ↓ ↓ ",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "reaction": "1",
+      "varName": "rediEvent.ReactionObj",
+      "info": "3",
+      "storage": "1",
+      "varName2": "EmojiName",
+      "name": "Store Reaction Info"
+    },
+    {
+      "reaction": "1",
+      "varName": "rediEvent.ReactionObj",
+      "info": "0",
+      "storage": "1",
+      "varName2": "MessageObject",
+      "name": "Store Reaction Info"
+    },
+    {
+      "message": "1",
+      "varName": "MessageObject",
+      "info": "4",
+      "storage": "1",
+      "varName2": "Channel",
+      "name": "Store Message Info"
+    },
+    {
+      "channel": "5",
+      "varName": "Channel",
+      "message": "${tempVars(\"rediEvent.Member\")} unreacted emoji: ${tempVars(\"EmojiName\")} in **${tempVars(\"Channel\").guild.name}**",
+      "storage": "0",
+      "varName2": "",
+      "name": "Send Message"
+    },
+    {
+      "comment": "↑ ↑ ↑ ↑ ↑ ↑ ↑",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "comment": "Don't touch the code below me. This stuff is pretty much flood protection for some random dupes.",
+      "color": "#80ffff",
+      "name": "Comment"
+    },
+    {
+      "storage": "1",
+      "varName": "redicache.commandEmitter",
+      "changeType": "0",
+      "value": "0",
+      "name": "Control Variable"
+    }
+  ]
+}
