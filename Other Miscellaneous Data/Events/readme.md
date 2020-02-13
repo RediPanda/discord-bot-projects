@@ -1,4 +1,9 @@
-DO NOT MODIFY THE EVENT TRIGGER IF YOU DON'T KNOW WHAT THE HECK YOU'RE DOING!<br />
+DO NOT MODIFY THE EVENT TRIGGER IF YOU DON'T KNOW WHAT THE HECK YOU'RE DOING!  
+
+# Information about the folowing files.
+
+`codeToBeRun.JSON` - This raw data will handle all your actions when the event boots.  
+`remoteEvent.JSON` - This raw data will listen to the events. This event SHOULD NOT BE MODIFIED!  
 
 # Lists of outputtable variables.
 
