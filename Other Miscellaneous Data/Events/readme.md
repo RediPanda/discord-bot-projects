@@ -8,6 +8,12 @@ A. That seems to be a problem, however you can warm the listeners up by reaction
 Q. Where do i put my actions when someone unreacts?!?  
 A. Go to the `MessageReactionRemoved` event and you can add your own actions between the arrows indicated.  
 
+Q. Is this compatible with Wrex's `On Non-Cached Reactions`?
+A. Yes! This has been tested and seems to work fine with reactions on old messages. Remember, it's faster once it's cached.
+
+Q. I got this error message: `MaxListenersExceededWarning: Possible EventEmitter memory leak detected. x messageReactionRemove listeners added. Use emitter.setMaxListeners() to increase limit`. Should I be concerned?
+A. This message comes from the Node.JS engine and should only appear once per bot session. This warning just shows that there are a lot of listeners active and has been capped at a certain limit.
+
 # Lists of outputtable variables.
 
 The following variables will be outputted:
