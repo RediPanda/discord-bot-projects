@@ -1,3 +1,7 @@
+# Retrieve the user who unreacted a reaction!
+
+This event does exactly what the name states! This custom event will run when the user unreacts an reaction and saves it to a useable DBM variable for later use. You can also have actions runned alongside the event!
+
 DO NOT MODIFY THE EVENT TRIGGER IF YOU DON'T KNOW WHAT THE HECK YOU'RE DOING!<br />
 
 # FAQ
