@@ -69,7 +69,7 @@
       "author": "${msg.author.username}",
       "color": "#FF0000",
       "url": "",
-      "authorIcon": "${msg.author.displayAvatarURL}",
+      "authorIcon": "${msg.author.displayAvatarURL()}",
       "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "",
