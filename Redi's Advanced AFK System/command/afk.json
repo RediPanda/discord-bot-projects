@@ -159,7 +159,7 @@
       "author": "${msg.author.username}",
       "color": "",
       "url": "",
-      "authorIcon": "${msg.author.displayAvatarURL}",
+      "authorIcon": "${msg.author.displayAvatarURL()}",
       "authorUrl": "",
       "imageUrl": "",
       "thumbUrl": "",
