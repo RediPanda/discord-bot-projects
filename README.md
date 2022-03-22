@@ -1,5 +1,7 @@
 # Redi's Discord Bot Repository
 
+**NOTE: THIS IS OUT OF DATE. I WILL NOT BE SUPPORTING ANY OF THESE PROJECTS.**
+
 Hello! Welcome to my DBM Repository,
 
 I assume you're here for that raw data yas? Well of course!
